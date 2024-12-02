@@ -1,0 +1,16 @@
+.side_anker {
+    -fx-background-color: #051923;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.profile {
+    -fx-background-image: url("trump.jpeg"); /* Path relative to resources folder */
+    -fx-background-radius: 100;  /* Circular shape */
+    -fx-background-radius: 50%;     /* Match circular shape for border */
+    -fx-background-color: #ffffff; /* Optional: Add a fallback color */
+    -fx-background-size: cover; /* Ensure the image covers the entire area */
+    -fx-background-position: center; /* Center the image */
+    -fx-border-color: #cccccc; /* Optional: Border color */
+    -fx-border-width: 2px;    /* Optional: Border thickness */
+}
