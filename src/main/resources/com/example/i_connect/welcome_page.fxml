@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.i_connect.WelcomePage">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -25,29 +25,30 @@
                </font>
             </Label>
             <Separator layoutX="58.0" layoutY="137.0" prefHeight="0.0" prefWidth="494.0" />
-            <TextField layoutX="154.0" layoutY="222.0" prefHeight="26.0" prefWidth="327.0" promptText="example@mail.com" />
+            <TextField fx:id="SignInEmail" layoutX="154.0" layoutY="222.0" prefHeight="26.0" prefWidth="327.0" promptText="example@mail.com" />
             <Label layoutX="154.0" layoutY="190.0" prefHeight="26.0" prefWidth="96.0" text="Email address">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <PasswordField layoutX="154.0" layoutY="287.0" prefHeight="26.0" prefWidth="327.0" promptText="Enter your password" />
+            <PasswordField fx:id="SignInPassword" layoutX="154.0" layoutY="287.0" prefHeight="26.0" prefWidth="327.0" promptText="Enter your password" />
             <Label layoutX="155.0" layoutY="258.0" prefHeight="26.0" prefWidth="96.0" text="Password">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Button layoutX="279.0" layoutY="339.0" mnemonicParsing="false" text="Sign in" />
-            <Label layoutX="197.0" layoutY="399.0" text="Don't have an account?">
+            <Button fx:id="signin" layoutX="279.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#handle_signin" text="Sign in" />
+            <Label layoutX="197.0" layoutY="447.0" text="Don't have an account?">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label ellipsisString="" layoutX="345.0" layoutY="399.0" text="Register Here" underline="true">
+            <Label fx:id="signup_page" ellipsisString="" layoutX="345.0" layoutY="447.0" onMouseClicked="#handle_register_here" text="Register Here" underline="true">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
+            <Label fx:id="ErrorMessage" layoutX="200.0" layoutY="373.0" />
          </children></AnchorPane>
   </items>
 </SplitPane>

@@ -6,9 +6,10 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.i_connect.SignupPage">
    <children>
@@ -62,5 +63,14 @@
       <PasswordField layoutX="193.0" layoutY="441.0" prefHeight="26.0" prefWidth="562.0" />
       <CheckBox layoutX="194.0" layoutY="484.0" mnemonicParsing="false" text="I agree to Terms and Conditions" />
       <Button layoutX="410.0" layoutY="515.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="68.0" text="Signup" />
+      <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="52.0" prefWidth="100.0">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="38.0" layoutX="18.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Drawable/BackIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

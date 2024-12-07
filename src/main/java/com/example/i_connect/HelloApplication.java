@@ -6,18 +6,38 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("chat_page.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        FXMLLoader Loader=new FXMLLoader(getClass().getResource("welcome_page.fxml"));
+        stage.setScene(new Scene(Loader.load()));
         stage.setTitle("Hello!");
-        stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        //launch();
+        try{
+            Connection connection= DriverManager.getConnection(
+                "jbdc:mysql://127.0.0.1:3306/student",
+                    "root",
+                    "2107052@Kuet"
+            );
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select*from KUET");
+
+            while (resultSet.next()){
+                System.out.println(resultSet.getInt("id"));
+                System.out.println(resultSet.getString("Roll"));
+                System.out.println("Marks");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
