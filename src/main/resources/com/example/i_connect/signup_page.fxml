@@ -54,18 +54,18 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="191.0" layoutY="123.0" prefHeight="26.0" prefWidth="562.0" />
-      <TextField layoutX="193.0" layoutY="175.0" prefHeight="26.0" prefWidth="562.0" />
-      <TextField layoutX="193.0" layoutY="228.0" prefHeight="26.0" prefWidth="562.0" />
-      <TextField layoutX="193.0" layoutY="276.0" prefHeight="26.0" prefWidth="562.0" />
-      <TextField layoutX="191.0" layoutY="329.0" prefHeight="26.0" prefWidth="562.0" />
-      <PasswordField layoutX="192.0" layoutY="384.0" prefHeight="26.0" prefWidth="562.0" />
-      <PasswordField layoutX="193.0" layoutY="441.0" prefHeight="26.0" prefWidth="562.0" />
-      <CheckBox layoutX="194.0" layoutY="484.0" mnemonicParsing="false" text="I agree to Terms and Conditions" />
-      <Button layoutX="410.0" layoutY="515.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="68.0" text="Signup" />
+      <TextField fx:id="SignUpFullName" layoutX="191.0" layoutY="123.0" prefHeight="26.0" prefWidth="562.0" />
+      <TextField fx:id="SignUpUsername" layoutX="193.0" layoutY="175.0" prefHeight="26.0" prefWidth="562.0" />
+      <TextField fx:id="SignUpInst" layoutX="193.0" layoutY="228.0" prefHeight="26.0" prefWidth="562.0" />
+      <TextField fx:id="SignUpRoll" layoutX="193.0" layoutY="276.0" prefHeight="26.0" prefWidth="562.0" />
+      <TextField fx:id="SignUpEmail" layoutX="191.0" layoutY="329.0" prefHeight="26.0" prefWidth="562.0" />
+      <PasswordField fx:id="SignUpPass" layoutX="192.0" layoutY="384.0" prefHeight="26.0" prefWidth="562.0" />
+      <PasswordField fx:id="ReEnterPass" layoutX="193.0" layoutY="441.0" prefHeight="26.0" prefWidth="562.0" />
+      <CheckBox fx:id="SignUpCheckbox" layoutX="194.0" layoutY="484.0" mnemonicParsing="false" text="I agree to Terms and Conditions" />
+      <Button fx:id="SignUpButton" layoutX="410.0" layoutY="515.0" mnemonicParsing="false" onMouseClicked="#SignUpButtonClicked" prefHeight="35.0" prefWidth="68.0" text="Signup" />
       <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="52.0" prefWidth="100.0">
          <children>
-            <ImageView fitHeight="45.0" fitWidth="38.0" layoutX="18.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="SignUpBack" fitHeight="45.0" fitWidth="38.0" layoutX="18.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Drawable/BackIcon.png" />
                </image>

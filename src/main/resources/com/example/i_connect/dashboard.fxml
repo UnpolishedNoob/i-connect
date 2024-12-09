@@ -1,32 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-border-radius: 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-border-radius: 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.i_connect.Dashboard">
    <children>
       <VBox prefHeight="600.0" prefWidth="256.0">
          <children>
             <AnchorPane id="ancorplane" prefHeight="600.0" prefWidth="256.0" styleClass="side_anker" stylesheets="@../../../Drawable/scratch.css">
                <children>
-                  <Pane layoutX="30.0" layoutY="39.0" prefHeight="200.0" prefWidth="200.0" styleClass="profile" stylesheets="@../../../Drawable/scratch.css" />
-                  <Text fill="WHITE" layoutX="95.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Donald Trump" />
-                  <Text fill="WHITE" layoutX="33.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Khulna University of Engineering &amp; Technology" wrappingWidth="199.19999999999982" />
+                  <Pane layoutX="30.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" styleClass="profile" stylesheets="@../../../Drawable/scratch.css" />
+                  <Text fx:id="Institution" fill="WHITE" layoutX="33.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Khulna University of Engineering &amp; Technology" textAlignment="CENTER" wrappingWidth="199.19999999999982" />
+                  <Text fx:id="FullName" fill="WHITE" layoutX="106.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FullName" />
+                  <Text fx:id="UserName" fill="WHITE" fontSmoothingType="LCD" layoutX="9.0" layoutY="301.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Donald" textAlignment="CENTER" underline="true" wrappingWidth="237.59995727539064">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="UserEmail" fill="WHITE" layoutX="107.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FullName" />
+                  <Text fx:id="Roll" fill="WHITE" layoutX="107.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FullName" />
+                  <ImageView fx:id="LogOutHandle" fitHeight="46.0" fitWidth="58.0" layoutX="104.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
+                     <image>
+                        <Image url="@../../../Drawable/LogOutIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="31.0" layoutY="27.0" prefWidth="200.0" />
                </children>
             </AnchorPane>
          </children>
       </VBox>
       <AnchorPane prefHeight="600.0" prefWidth="644.0">
          <children>
-            <Button layoutX="11.0" layoutY="129.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Resources" textFill="#c91a1a" />
-            <Button layoutX="223.0" layoutY="130.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="199.0" text="Notes" />
+            <Button fx:id="ResourceButton" layoutX="11.0" layoutY="129.0" mnemonicParsing="false" onMouseClicked="#GoResourcesPage" prefHeight="200.0" prefWidth="200.0" text="Notes" />
+            <Button layoutX="223.0" layoutY="130.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="199.0" text="Resources" />
             <Button layoutX="432.0" layoutY="130.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Groups" />
             <Text layoutX="11.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" />
             <Text layoutX="88.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to i connect" />
+            <Separator layoutX="12.0" layoutY="28.0" prefHeight="3.0" prefWidth="619.0" />
          </children>
       </AnchorPane>
    </children>

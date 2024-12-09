@@ -25,7 +25,7 @@
                </font>
             </Label>
             <Separator layoutX="58.0" layoutY="137.0" prefHeight="0.0" prefWidth="494.0" />
-            <TextField fx:id="SignInEmail" layoutX="154.0" layoutY="222.0" prefHeight="26.0" prefWidth="327.0" promptText="example@mail.com" />
+            <TextField fx:id="SignInEmail" layoutX="156.0" layoutY="222.0" prefHeight="26.0" prefWidth="327.0" promptText="example@mail.com" />
             <Label layoutX="154.0" layoutY="190.0" prefHeight="26.0" prefWidth="96.0" text="Email address">
                <font>
                   <Font size="15.0" />
@@ -48,7 +48,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="ErrorMessage" layoutX="200.0" layoutY="373.0" />
+            <Label fx:id="ErrorMessage" layoutX="196.0" layoutY="373.0" prefHeight="18.0" prefWidth="213.0" />
          </children></AnchorPane>
   </items>
 </SplitPane>

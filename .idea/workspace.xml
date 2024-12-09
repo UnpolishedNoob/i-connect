@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="312044a0-4998-4dd3-aa5b-eae3aa986679" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Drawable/BackIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/KeepNotes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Drawable/LogOutIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Drawable/PlusIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/KeepNotes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lib/mysql-connector-java-8.0.28.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/ResourcePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/ResourcePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/SignupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/SignupPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/WelcomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/resource_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/resource_page.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/signup_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/signup_page.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/welcome_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/welcome_page.fxml" afterDir="false" />
     </list>
@@ -50,9 +59,10 @@
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dashboardfartheredit",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/HP/Desktop/code_workplace/Java/i connect/src/main/java/com/example/i_connect",
-    "last_opened_file_path": "D:/Downloads/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0.jar",
+    "last_opened_file_path": "C:/Users/HP/Desktop/code_workplace/Java/i connect/src/main/resources/Drawable",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3643678"
@@ -66,6 +76,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\Desktop\code_workplace\Java\i connect\src\main\resources\Drawable" />
+      <recent name="C:\Users\HP\Desktop\code_workplace\Java\i connect\src\main\resources\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HP\Desktop\code_workplace\Java\i connect\src\main\resources\Drawable" />
