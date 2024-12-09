@@ -10,6 +10,7 @@ module com.example.i_connect {
     requires org.kordamp.bootstrapfx.core;
     //requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens com.example.i_connect to javafx.fxml;
     exports com.example.i_connect;
