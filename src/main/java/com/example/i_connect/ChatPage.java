@@ -2,15 +2,20 @@ package com.example.i_connect;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -44,20 +49,15 @@ public class ChatPage implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Retrieve current user's information
         retrieveCurrentUserInfo();
 
-        // Configure send button
         SendText.setOnAction(event -> sendMessage());
 
-        // Enable message sending with Enter key
         InputText.setOnAction(event -> sendMessage());
 
-        // Auto-scroll to bottom
         ShowMsg.heightProperty().addListener((observable, oldValue, newValue) ->
                 Scrollmsg.setVvalue(1.0));
 
-        // Start message polling
         startMessagePolling();
     }
 
@@ -66,8 +66,6 @@ public class ChatPage implements Initializable {
     }
 
     private void retrieveCurrentUserInfo() {
-        // In a real application, this would come from a session or login context
-        // For now, we'll use a placeholder method that you'll replace with actual session management
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
              PreparedStatement pstmt = conn.prepareStatement(
                      "SELECT email, username FROM users LIMIT 1")) {
@@ -145,22 +143,18 @@ public class ChatPage implements Initializable {
         messageBox.setSpacing(10);
         messageBox.setPadding(new Insets(5));
 
-        // Username Label
         Label usernameLabel = new Label(username + ":");
         usernameLabel.setStyle("-fx-font-weight: bold;");
 
-        // Message Text
         Text messageText = new Text(content);
         TextFlow textFlow = new TextFlow(messageText);
         textFlow.setStyle("-fx-background-color: #F0F0F0; -fx-background-radius: 10; -fx-padding: 5px;");
 
-        // Timestamp Label
         Label timestampLabel = new Label(
                 timestamp.format(DateTimeFormatter.ofPattern("HH:mm"))
         );
         timestampLabel.setStyle("-fx-font-size: 10px; -fx-text-fill: gray;");
 
-        // Arrange components
         messageBox.getChildren().addAll(usernameLabel, textFlow, timestampLabel);
         messageBox.setAlignment(Pos.CENTER_LEFT);
 
@@ -173,5 +167,22 @@ public class ChatPage implements Initializable {
         alert.setHeaderText(null);
         alert.setContentText(content);
         alert.showAndWait();
+    }
+
+    public void GoDashboard(MouseEvent mouseEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
+            Parent root = loader.load();
+            Dashboard controller = loader.getController();
+            controller.setUserEmail(currentUserEmail);
+            Stage stage = (Stage) SendText.getScene().getWindow();
+
+            stage.setScene(new javafx.scene.Scene(root));
+            stage.setTitle("i connect");
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

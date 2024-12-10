@@ -5,6 +5,8 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -13,15 +15,21 @@
       <Button fx:id="SendText" layoutX="804.0" layoutY="536.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="64.0" text="send" />
       <TextField fx:id="InputText" layoutX="302.0" layoutY="537.0" prefHeight="30.0" prefWidth="496.0" />
       <ScrollPane fx:id="Scrollmsg" fitToHeight="true" fitToWidth="true" layoutX="302.0" layoutY="54.0" prefHeight="474.0" prefWidth="554.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="538.0">
-               <children>
-                  <VBox fx:id="ShowMsg" layoutY="18.0" prefHeight="468.0" prefWidth="554.0" />
-               </children>
-            </AnchorPane>
-        </content>
+         <content>
+            <VBox fx:id="ShowMsg" prefHeight="200.0" prefWidth="100.0" />
+         </content>
       </ScrollPane>
       <Label layoutX="352.0" layoutY="14.0" prefHeight="30.0" prefWidth="73.0" text="i connect" />
       <Separator layoutX="280.0" layoutY="48.6" orientation="VERTICAL" prefHeight="526.0" prefWidth="0.0" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="48.6" />
+      <Separator layoutX="36.0" layoutY="58.0" prefWidth="200.0" />
+      <AnchorPane layoutX="25.0" layoutY="8.0" prefHeight="48.0" prefWidth="55.0">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="3.0" layoutY="5.0" onMouseClicked="#GoDashboard" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Drawable/BackIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

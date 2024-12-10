@@ -2,6 +2,7 @@ module com.example.i_connect {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires java.sql;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
@@ -10,7 +11,8 @@ module com.example.i_connect {
     requires org.kordamp.bootstrapfx.core;
     //requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
-    requires java.sql;
+    requires java.net.http;
+    requires com.google.gson;
 
     opens com.example.i_connect to javafx.fxml;
     exports com.example.i_connect;

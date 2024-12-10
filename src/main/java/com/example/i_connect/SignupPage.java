@@ -56,20 +56,16 @@ public class SignupPage {
 
     @FXML
     public void SignUpButtonClicked(MouseEvent event) {
-        // Validate input fields
         if (!validateInputs()) {
             System.out.println("not valid ! ");
             return;
         }
 
-        // Attempt to register user
         try {
             if (registerUser()) {
-                // Navigate to login or dashboard
                 navigateToLogin();
             }
         } catch (SQLException e) {
-            // Handle database errors
             showErrorDialog("Registration Failed", "An error occurred: " + e.getMessage());
         }
     }
@@ -82,6 +78,7 @@ public class SignupPage {
             Stage stage = (Stage) SignUpBack.getScene().getWindow();
             stage.setScene(new javafx.scene.Scene(root));
             stage.setTitle("i connect");
+            stage.setResizable(false);
             stage.show();
         } catch (IOException e) {
             System.out.println("Failed to Load !");
@@ -90,38 +87,32 @@ public class SignupPage {
     }
 
     private boolean validateInputs() {
-        // Full Name validation
         if (SignUpFullName.getText().isEmpty()) {
             showErrorDialog("Validation Error", "Full Name cannot be empty");
             return false;
         }
 
-        // Username validation
         if (SignUpUsername.getText().isEmpty() || SignUpUsername.getText().length() < 3) {
             showErrorDialog("Validation Error", "Username must be at least 3 characters long");
             return false;
         }
 
-        // Email validation
         String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
         if (!Pattern.matches(emailRegex, SignUpEmail.getText())) {
             showErrorDialog("Validation Error", "Invalid email format");
             return false;
         }
 
-        // Password validation
         if (SignUpPass.getText().isEmpty() || SignUpPass.getText().length() < 8) {
             showErrorDialog("Validation Error", "Password must be at least 8 characters long");
             return false;
         }
 
-        // Confirm password
         if (!SignUpPass.getText().equals(ReEnterPass.getText())) {
             showErrorDialog("Validation Error", "Passwords do not match");
             return false;
         }
 
-        // Terms and conditions
         if (!SignUpCheckbox.isSelected()) {
             showErrorDialog("Validation Error", "You must agree to the Terms and Conditions");
             return false;
@@ -131,9 +122,7 @@ public class SignupPage {
     }
 
     private boolean registerUser() throws SQLException {
-        // Establish database connection
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
-            // Prepare SQL insert statement
             String sql = "INSERT INTO users (full_name, username, institution, roll_number, email, password) " +
                     "VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -144,10 +133,8 @@ public class SignupPage {
             statement.setString(4, SignUpRoll.getText());
             statement.setString(5, SignUpEmail.getText());
 
-            // In a real-world application, you should hash the password
             statement.setString(6, SignUpPass.getText());
 
-            // Execute the insert
             int rowsInserted = statement.executeUpdate();
 
             return rowsInserted > 0;
@@ -160,7 +147,8 @@ public class SignupPage {
             Parent root = Loader.load();
             Stage stage = (Stage) SignUpButton.getScene().getWindow();
             stage.setScene(new javafx.scene.Scene(root));
-            stage.setTitle("Welcome");
+            stage.setTitle("i connect");
+            stage.setResizable(false);
             stage.show();
         } catch (IOException e) {
             System.out.println("Failed to Load !");

@@ -72,18 +72,14 @@ public class WelcomePage {
     }
 
     private boolean authenticateUser(String email, String password) throws SQLException {
-        // Establish database connection
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
-            // Prepare SQL statement to check user credentials
             String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
 
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, email);
-                statement.setString(2, password); // Note: In a real application, use password hashing
+                statement.setString(2, password);
 
-                // Execute query
                 try (ResultSet resultSet = statement.executeQuery()) {
-                    // Return true if a matching user is found
                     return resultSet.next();
                 }
             }
