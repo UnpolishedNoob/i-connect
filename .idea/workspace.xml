@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="312044a0-4998-4dd3-aa5b-eae3aa986679" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/ChatPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/ChatPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/GroupPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/KeepNotes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/KeepNotes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/i_connect/ResourcePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/i_connect/ResourcePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/group_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/ResourcePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/resource_page.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/chat_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/i_connect/chat_page.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,5 +130,16 @@
       <updated>1733112026108</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
