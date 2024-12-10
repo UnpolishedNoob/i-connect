@@ -22,27 +22,22 @@ public class KeepNotes {
     @FXML
     private ImageView BackToDashboard;
 
-    // Database connection details
+
     private static final String DB_URL = "jdbc:mysql://localhost:3306/student";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "2107052@Kuet";
 
-    // Current user's email
     private String currentUserEmail;
 
-    // Observable list to hold notes
     private ObservableList<Note> notesList;
 
     @FXML
     public void initialize() {
-        // Initialize the notes list
         notesList = FXCollections.observableArrayList();
         notesListView.setItems(notesList);
 
-        // Custom cell factory to display notes nicely
         notesListView.setCellFactory(param -> new NoteListCell());
 
-        // Double-click to edit note
         notesListView.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
                 Note selectedNote = notesListView.getSelectionModel().getSelectedItem();
@@ -52,10 +47,8 @@ public class KeepNotes {
             }
         });
 
-        // Context menu for right-click options
         ContextMenu contextMenu = new ContextMenu();
 
-        // Edit menu item
         MenuItem editItem = new MenuItem("Edit Note");
         editItem.setOnAction(event -> {
             Note selectedNote = notesListView.getSelectionModel().getSelectedItem();
@@ -64,16 +57,13 @@ public class KeepNotes {
             }
         });
 
-        // Delete menu item
         MenuItem deleteItem = new MenuItem("Delete Note");
         deleteItem.setOnAction(event -> deleteSelectedNote());
 
-        // Add items to context menu
         contextMenu.getItems().addAll(editItem, deleteItem);
         notesListView.setContextMenu(contextMenu);
     }
 
-    // Method to set current user's email when navigating from login/dashboard
     public void setUserEmail(String email) {
         this.currentUserEmail = email;
         loadNotesFromDatabase();
@@ -86,24 +76,19 @@ public class KeepNotes {
             return;
         }
 
-        // Create a custom dialog for note input
         Dialog<String> dialog = new Dialog<>();
         dialog.setTitle("Add New Note");
         dialog.setHeaderText("Enter Note Content");
 
-        // Set the button types
         ButtonType saveButtonType = new ButtonType("Save", ButtonBar.ButtonData.OK_DONE);
         dialog.getDialogPane().getButtonTypes().addAll(saveButtonType, ButtonType.CANCEL);
 
-        // Create the note content text area
         TextArea noteContentArea = new TextArea();
         noteContentArea.setWrapText(true);
         noteContentArea.setPromptText("Enter your note here...");
 
-        // Set the text area in the dialog
         dialog.getDialogPane().setContent(noteContentArea);
 
-        // Convert the result to the note content when save is clicked
         dialog.setResultConverter(dialogButton -> {
             if (dialogButton == saveButtonType) {
                 return noteContentArea.getText();
@@ -111,7 +96,6 @@ public class KeepNotes {
             return null;
         });
 
-        // Show the dialog and process the result
         Optional<String> result = dialog.showAndWait();
         result.ifPresent(content -> {
             if (!content.trim().isEmpty()) {
@@ -121,23 +105,18 @@ public class KeepNotes {
     }
 
     private void editNote(Note note) {
-        // Create a custom dialog for note editing
         Dialog<String> dialog = new Dialog<>();
         dialog.setTitle("Edit Note");
         dialog.setHeaderText("Modify Note Content");
 
-        // Set the button types
         ButtonType saveButtonType = new ButtonType("Save", ButtonBar.ButtonData.OK_DONE);
         dialog.getDialogPane().getButtonTypes().addAll(saveButtonType, ButtonType.CANCEL);
 
-        // Create the note content text area
         TextArea noteContentArea = new TextArea(note.getContent());
         noteContentArea.setWrapText(true);
 
-        // Set the text area in the dialog
         dialog.getDialogPane().setContent(noteContentArea);
 
-        // Convert the result to the note content when save is clicked
         dialog.setResultConverter(dialogButton -> {
             if (dialogButton == saveButtonType) {
                 return noteContentArea.getText();
@@ -145,7 +124,6 @@ public class KeepNotes {
             return null;
         });
 
-        // Show the dialog and process the result
         Optional<String> result = dialog.showAndWait();
         result.ifPresent(content -> {
             if (!content.trim().isEmpty()) {
@@ -161,7 +139,6 @@ public class KeepNotes {
             return;
         }
 
-        // Confirmation dialog
         Alert confirmDialog = new Alert(Alert.AlertType.CONFIRMATION);
         confirmDialog.setTitle("Delete Note");
         confirmDialog.setHeaderText("Are you sure you want to delete this note?");
@@ -184,7 +161,6 @@ public class KeepNotes {
             int affectedRows = pstmt.executeUpdate();
 
             if (affectedRows > 0) {
-                // Remove the note from the list view
                 notesList.removeIf(note -> note.getId().equals(noteId));
             } else {
                 showAlert("Error", "Failed to delete note.", Alert.AlertType.ERROR);
@@ -262,7 +238,6 @@ public class KeepNotes {
             int affectedRows = pstmt.executeUpdate();
 
             if (affectedRows > 0) {
-                // Update the note in the list view
                 for (Note note : notesList) {
                     if (note.getId().equals(noteId)) {
                         note.setContent(newContent);
@@ -281,20 +256,16 @@ public class KeepNotes {
     @FXML
     public void backToDashboard() {
         try {
-            // Load dashboard page
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
             Parent root = loader.load();
 
-            // Get the dashboard controller and set the user email
             Dashboard controller = loader.getController();
             controller.setUserEmail(currentUserEmail);
-
-            // Get current stage
             Stage stage = (Stage) BackToDashboard.getScene().getWindow();
 
-            // Set new scene
             stage.setScene(new javafx.scene.Scene(root));
-            stage.setTitle("Dashboard");
+            stage.setTitle("i connect");
+            stage.setResizable(false);
             stage.show();
         } catch (IOException e) {
             showAlert("Navigation Error", "Failed to load dashboard.", Alert.AlertType.ERROR);
@@ -302,13 +273,11 @@ public class KeepNotes {
         }
     }
 
-    // Utility method to generate unique note ID
     private String generateUniqueId() {
         return "NOTE_" + System.currentTimeMillis() + "_" +
                 Math.round(Math.random() * 1000);
     }
 
-    // Enhanced alert method with different alert types
     private void showAlert(String title, String content, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
@@ -317,7 +286,6 @@ public class KeepNotes {
         alert.showAndWait();
     }
 
-    // Note class remains the same as in previous implementation
     public static class Note {
         private String id;
         private String content;
@@ -329,7 +297,6 @@ public class KeepNotes {
             this.createdAt = createdAt;
         }
 
-        // Getters and setters
         public String getId() { return id; }
         public String getContent() { return content; }
         public void setContent(String content) { this.content = content; }
@@ -342,7 +309,6 @@ public class KeepNotes {
         }
     }
 
-    // Custom cell factory for list view
     private static class NoteListCell extends javafx.scene.control.ListCell<Note> {
         @Override
         protected void updateItem(Note note, boolean empty) {
