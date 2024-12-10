@@ -76,7 +76,7 @@ public class Dashboard {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("chat_page.fxml"));
             Parent root = loader.load();
             ChatPage controller = loader.getController();
-            //controller.setUserEmail(currentUserEmail);
+            controller.setUserEmail(currentUserEmail);
             Stage stage = (Stage) ResourceButton.getScene().getWindow();
 
             // Set new scene
