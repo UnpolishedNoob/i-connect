@@ -8,6 +8,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -27,7 +28,10 @@ import java.util.concurrent.TimeUnit;
 
 public class ChatPage implements Initializable {
     @FXML
-    private Button SendText;
+    public ImageView backtodashboard;
+    @FXML
+    public ImageView SendText;
+
 
     @FXML
     private TextField InputText;
@@ -51,7 +55,7 @@ public class ChatPage implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         retrieveCurrentUserInfo();
 
-        SendText.setOnAction(event -> sendMessage());
+        SendText.setOnMouseClicked(event -> sendMessage());
 
         InputText.setOnAction(event -> sendMessage());
 

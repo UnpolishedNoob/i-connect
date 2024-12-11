@@ -1,16 +1,93 @@
 .side_anker {
-    -fx-background-color: #051923;
-    -fx-border-radius: 10;
-    -fx-background-radius: 10;
+    -fx-background-color: #E38E49; /* Orange background */
+    -fx-background-radius: 8px; /* Rounded corners */
+    -fx-text-fill: black; /* Optional: text color */
+    -fx-padding: 10px 20px; /* Optional: padding for spacing */
+    -fx-cursor: hand; /* Optional: hand cursor on hover */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 3); /* Optional: shadow */
 }
 
-.profile {
-   -fx-background-image: url("Drawable/trump.jpeg"); /* Path relative to resources folder */
-    -fx-background-radius: 100;  /* Circular shape */
-    -fx-border-radius: 100;     /* Match circular shape for border */
-    -fx-background-color: #ffffff; /* Optional: Add a fallback color */
-    /* -fx-background-size: cover; Ensure the image covers the entire area */
-    -fx-background-position: center; /* Center the image */
-    -fx-border-color: #cccccc; /* Optional: Border color */
-    -fx-border-width: 2px;    /* Optional: Border thickness */
+.side_anker_dashboard {
+    -fx-background-color: #051923;
+}
+
+.welcome_background{
+    -fx-background-color: #E38E49;
+}
+
+.button {
+    -fx-background-color: #201E43;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px 35px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff4500, #ff7f50);
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.8), 15, 0, 0, 0);
+}
+
+.button:pressed {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+/* Glowing effect */
+.button::after {
+    -fx-background-color: #333;
+    -fx-background-radius: 8px;
+}
+
+.button::before {
+    -fx-background-color: linear-gradient(
+        45deg,
+        #FF0000,
+        #FF7300,
+        #FFFB00,
+        #48FF00,
+        #00FFD5,
+        #002BFF,
+        #FF00C8,
+        #FF0000
+    );
+    -fx-background-radius: 8px;
+    -fx-effect: gaussian-blur(8px);
+    -fx-opacity: 0;
+    -fx-background-size: 600%;
+    -fx-animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% { -fx-background-position: 0 0; }
+    50% { -fx-background-position: 400% 0; }
+    100% { -fx-background-position: 0 0; }
+}
+
+.button:hover::before {
+    -fx-opacity: 12;
+}
+
+.button:pressed::after {
+    -fx-background-color: transparent;
+}
+
+
+.KeepNote{
+    -fx-background-color: #E1FFBB;
+}
+
+.sendbutton:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff4500, #ff7f50);
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.8), 15, 0, 0, 0);
+}
+
+.sendbutton:pressed {
+    -fx-background-color: linear-gradient(to bottom, #ff7f50, #ff4500);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
+    -fx-translate-y: 2px;
+    -fx-text-fill: #ffffff;
 }

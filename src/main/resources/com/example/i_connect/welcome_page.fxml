@@ -6,17 +6,26 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.i_connect.WelcomePage">
+<SplitPane dividerPositions="0.3575244879786286" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="side_anker" stylesheets="@scratch.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.i_connect.WelcomePage">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../../../Drawable/scratch.css">
+         <children>
+            <ImageView fitHeight="361.0" fitWidth="520.0" layoutX="-95.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Drawable/AppLogo.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <Label layoutX="53.0" layoutY="50.0" prefHeight="50.0" prefWidth="347.0" text="Welcome to i connect">
+            <Label layoutX="53.0" layoutY="50.0" prefHeight="50.0" prefWidth="347.0" text="Welcome to i connect" textFill="#201e43">
                <font>
-                  <Font size="34.0" />
+                  <Font name="System Bold" size="34.0" />
                </font>
             </Label>
             <Label layoutX="55.0" layoutY="93.0" prefHeight="32.0" prefWidth="206.0" text="Let's connect together">
@@ -25,19 +34,19 @@
                </font>
             </Label>
             <Separator layoutX="58.0" layoutY="137.0" prefHeight="0.0" prefWidth="494.0" />
-            <TextField fx:id="SignInEmail" layoutX="156.0" layoutY="222.0" prefHeight="26.0" prefWidth="327.0" promptText="example@mail.com" />
-            <Label layoutX="154.0" layoutY="190.0" prefHeight="26.0" prefWidth="96.0" text="Email address">
+            <TextField fx:id="SignInEmail" layoutX="154.0" layoutY="222.0" prefHeight="32.0" prefWidth="327.0" promptText="example@mail.com" />
+            <Label layoutX="154.0" layoutY="188.0" prefHeight="32.0" prefWidth="120.0" text="Email address">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <PasswordField fx:id="SignInPassword" layoutX="154.0" layoutY="287.0" prefHeight="26.0" prefWidth="327.0" promptText="Enter your password" />
+            <PasswordField fx:id="SignInPassword" layoutX="154.0" layoutY="287.0" prefHeight="32.0" prefWidth="327.0" promptText="Enter your password" />
             <Label layoutX="155.0" layoutY="258.0" prefHeight="26.0" prefWidth="96.0" text="Password">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Button fx:id="signin" layoutX="279.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#handle_signin" text="Sign in" />
+            <Button fx:id="signin" layoutX="265.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#handle_signin" prefHeight="32.0" prefWidth="120.0" stylesheets="@scratch.css" text="Sign in" />
             <Label layoutX="197.0" layoutY="447.0" text="Don't have an account?">
                <font>
                   <Font size="14.0" />
@@ -45,10 +54,10 @@
             </Label>
             <Label fx:id="signup_page" ellipsisString="" layoutX="345.0" layoutY="447.0" onMouseClicked="#handle_register_here" text="Register Here" underline="true">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold Italic" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="ErrorMessage" layoutX="196.0" layoutY="373.0" prefHeight="18.0" prefWidth="213.0" />
+            <Label fx:id="ErrorMessage" layoutX="212.0" layoutY="396.0" prefHeight="18.0" prefWidth="213.0" />
          </children></AnchorPane>
   </items>
 </SplitPane>
