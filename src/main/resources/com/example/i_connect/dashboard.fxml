@@ -6,33 +6,42 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-border-radius: 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.i_connect.Dashboard">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-border-radius: 10;" styleClass="welcome_background" stylesheets="@scratch.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.i_connect.Dashboard">
    <children>
       <VBox prefHeight="600.0" prefWidth="256.0">
          <children>
-            <AnchorPane id="ancorplane" prefHeight="600.0" prefWidth="256.0" styleClass="side_anker" stylesheets="@../../../Drawable/scratch.css">
+            <AnchorPane prefHeight="600.0" prefWidth="265.0" styleClass="side_anker_dashboard" stylesheets="@../../../Drawable/scratch.css">
                <children>
-                  <Pane fx:id="ProfilePic" layoutX="30.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" styleClass="profile" stylesheets="@../../../Drawable/scratch.css" />
-                  <Text fx:id="Institution" fill="WHITE" layoutX="3.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Khulna University of Engineering &amp; Technology" textAlignment="CENTER" wrappingWidth="247.7562255859375" />
-                  <Text fx:id="FullName" fill="WHITE" layoutX="2.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FullName" textAlignment="CENTER" wrappingWidth="247.7562255859375" />
-                  <Text fx:id="UserName" fill="WHITE" fontSmoothingType="LCD" layoutX="9.0" layoutY="301.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Donald" textAlignment="CENTER" underline="true" wrappingWidth="237.59995727539064">
+                  <Text fx:id="Institution" fill="WHITE" layoutX="11.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Khulna University of Engineering &amp; Technology" textAlignment="CENTER" wrappingWidth="237.35618591308588">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="Segoe UI Black Italic" size="12.0" />
+                     </font></Text>
+                  <Text fx:id="FullName" fill="WHITE" layoutX="13.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FullName" textAlignment="CENTER" wrappingWidth="237.35618591308594">
+                     <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                     </font></Text>
+                  <Text fx:id="UserName" fill="WHITE" fontSmoothingType="LCD" layoutX="24.0" layoutY="289.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Donald" textAlignment="CENTER" underline="true" wrappingWidth="227.19993286132814">
+                     <font>
+                        <Font name="Segoe UI Black Italic" size="24.0" />
                      </font>
                   </Text>
-                  <Text fx:id="UserEmail" fill="WHITE" layoutX="-7.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emali" textAlignment="CENTER" wrappingWidth="255.99999999999994" />
-                  <Text fx:id="Roll" fill="WHITE" layoutX="-1.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll" textAlignment="CENTER" wrappingWidth="247.7562255859375" />
+                  <Text fx:id="UserEmail" fill="WHITE" layoutX="17.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emali" textAlignment="CENTER" wrappingWidth="227.19993286132825" />
+                  <Text fx:id="Roll" fill="WHITE" layoutX="18.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2107052" textAlignment="CENTER" wrappingWidth="227.19993286132802" />
                   <ImageView fx:id="LogOutHandle" fitHeight="46.0" fitWidth="58.0" layoutX="104.0" layoutY="537.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
                      <image>
                         <Image url="@../../../Drawable/LogOutIcon.png" />
                      </image>
                   </ImageView>
-                  <Separator layoutX="31.0" layoutY="27.0" prefWidth="200.0" />
+                  <Separator layoutX="45.0" layoutY="27.0" prefWidth="200.0" />
+                  <ImageView fitHeight="185.0" fitWidth="200.0" layoutX="51.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Drawable/profile-icon.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </children>
@@ -42,11 +51,18 @@
             <Button fx:id="NotesButton" layoutX="58.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#GoNotesPage" prefHeight="200.0" prefWidth="200.0" text="Notes" />
             <Button fx:id="ChatButton" layoutX="359.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#GoChat" prefHeight="200.0" prefWidth="200.0" text="Chat" />
             <Text layoutX="11.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" />
-            <Text layoutX="88.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to i connect" />
-            <Separator layoutX="12.0" layoutY="28.0" prefHeight="3.0" prefWidth="619.0" />
-            <Text fx:id="Quotes" layoutX="18.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="607.2000305175779" />
-            <Text fx:id="Writer" layoutX="227.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="385.3366394042969" />
-            <Separator layoutX="10.0" layoutY="332.0" prefHeight="3.0" prefWidth="619.0" />
+            <Text layoutX="103.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to i connect" />
+            <Separator layoutX="12.0" layoutY="28.0" prefHeight="3.0" prefWidth="586.0" />
+            <Text fx:id="Quotes" layoutX="15.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="knk" textAlignment="CENTER" wrappingWidth="567.9998352050779">
+               <font>
+                  <Font name="ScriptC" size="26.0" />
+               </font></Text>
+            <Text fx:id="Writer" layoutX="15.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kjjk" wrappingWidth="357.3365173339844">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font></Text>
+            <Separator layoutX="10.0" layoutY="332.0" prefHeight="3.0" prefWidth="586.0" />
+            <Separator layoutX="81.0" layoutY="10.0" orientation="VERTICAL" prefHeight="16.0" prefWidth="0.0" />
          </children>
       </AnchorPane>
    </children>

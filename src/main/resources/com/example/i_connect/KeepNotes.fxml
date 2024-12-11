@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.i_connect.KeepNotes">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@scratch.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.i_connect.KeepNotes">
     <content>
-        <AnchorPane prefHeight="600.0" prefWidth="900.0">
+        <AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="side_anker" stylesheets="@scratch.css">
             <children>
                 <VBox layoutX="230.0" layoutY="36.0" prefHeight="536.0" prefWidth="439.0" style="-fx-border-color: FCC737;">
                     <children>
@@ -34,7 +36,7 @@
                                 <DropShadow />
                             </effect>
                         </AnchorPane>
-                        <ListView fx:id="notesListView" prefHeight="406.0" prefWidth="438.0" />
+                        <ListView fx:id="notesListView" prefHeight="406.0" prefWidth="438.0" styleClass="KeepNote" stylesheets="@scratch.css" />
                     </children>
                     <cursor>
                         <Cursor fx:constant="DEFAULT" />
@@ -45,6 +47,10 @@
                         <Image url="@../../../Drawable/BackIcon.png" />
                     </image>
                 </ImageView>
+            <Label layoutX="310.0" layoutY="6.0" text="Make important Notes" />
+            <Label layoutX="236.0" layoutY="6.0" text="Keep Notes" />
+            <Separator layoutX="99.0" layoutY="26.0" prefHeight="2.0" prefWidth="759.0" />
+            <Separator layoutX="302.0" layoutY="6.0" orientation="VERTICAL" prefHeight="18.0" prefWidth="0.0" />
             </children>
         </AnchorPane>
     </content>

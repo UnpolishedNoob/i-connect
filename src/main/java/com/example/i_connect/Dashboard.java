@@ -118,7 +118,7 @@ public class Dashboard {
 
 
     private static final String API_KEY = "LKzs2TeGe01h7Z6BQF+CVQ==5P7SSMYP8X1PEsmN";
-    private static final String API_URL = "https://api.api-ninjas.com/v1/quotes?category=computers";
+    private static final String API_URL = "https://api.api-ninjas.com/v1/quotes";
 
 
     @FXML
