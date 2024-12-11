@@ -65,7 +65,7 @@
       <Button fx:id="SignUpButton" layoutX="410.0" layoutY="515.0" mnemonicParsing="false" onMouseClicked="#SignUpButtonClicked" prefHeight="50.0" prefWidth="130.0" text="Signup" />
       <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="52.0" prefWidth="100.0">
          <children>
-            <ImageView fx:id="SignUpBack" fitHeight="45.0" fitWidth="38.0" layoutX="18.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="SignUpBack" fitHeight="45.0" fitWidth="38.0" layoutX="18.0" layoutY="25.0" onMouseClicked="#navigateToLogin" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Drawable/BackIcon.png" />
                </image>

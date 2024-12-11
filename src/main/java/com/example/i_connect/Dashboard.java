@@ -64,11 +64,10 @@ public class Dashboard {
             String sql = "SELECT full_name, username, institution, roll_number FROM users WHERE email = ?";
 
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
-                // Set the email parameter here
                 statement.setString(1, email);
 
                 try (ResultSet resultSet = statement.executeQuery()) {
-                    if (resultSet.next()) {  // Check if a result exists before accessing
+                    if (resultSet.next()) {
                         FullName.setText(resultSet.getString("full_name"));
                         UserName.setText(resultSet.getString("username"));
                         Institution.setText(resultSet.getString("institution"));
@@ -146,7 +145,7 @@ public class Dashboard {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(API_URL))
-                    .header("X-Api-Key", API_KEY) // Add the API key in the request header
+                    .header("X-Api-Key", API_KEY)
                     .GET()
                     .build();
 

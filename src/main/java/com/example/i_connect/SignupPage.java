@@ -60,7 +60,6 @@ public class SignupPage {
             System.out.println("not valid ! ");
             return;
         }
-
         try {
             if (registerUser()) {
                 navigateToLogin();
@@ -141,7 +140,7 @@ public class SignupPage {
         }
     }
 
-    private void navigateToLogin() {
+    public void navigateToLogin() {
         try {
             FXMLLoader Loader = new FXMLLoader(getClass().getResource("welcome_page.fxml"));
             Parent root = Loader.load();

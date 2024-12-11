@@ -46,7 +46,6 @@ public class ChatPage implements Initializable {
     private String currentUsername;
     private int lastMessageId = 0;
 
-    // Database connection details
     private static final String DB_URL = "jdbc:mysql://localhost:3306/student";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "2107052@Kuet";
