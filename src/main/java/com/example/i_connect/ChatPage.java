@@ -189,3 +189,9 @@ public class ChatPage implements Initializable {
         }
     }
 }
+
+
+//Project details
+
+//App name : i_connect
+//Build by : Pritom Banik

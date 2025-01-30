@@ -1,3 +1,8 @@
+//Project details
+
+//App name : i_connect
+//Build by : Pritom Banik
+
 package com.example.i_connect;
 
 import javafx.application.Application;

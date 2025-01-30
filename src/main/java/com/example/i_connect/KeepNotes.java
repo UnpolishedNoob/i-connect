@@ -323,3 +323,8 @@ public class KeepNotes {
         }
     }
 }
+
+//Project details
+
+//App name : i_connect
+//Build by : Pritom Banik

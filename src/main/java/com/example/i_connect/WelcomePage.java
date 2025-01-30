@@ -134,3 +134,9 @@ public class WelcomePage {
         return UserPassword;
     }
 }
+
+
+//Project details
+
+//App name : i_connect
+//Build by : Pritom Banik
