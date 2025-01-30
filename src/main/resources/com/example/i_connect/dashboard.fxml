@@ -14,7 +14,7 @@
    <children>
       <VBox prefHeight="600.0" prefWidth="256.0">
          <children>
-            <AnchorPane prefHeight="600.0" prefWidth="265.0" styleClass="side_anker_dashboard" stylesheets="@../../../Drawable/scratch.css">
+            <AnchorPane prefHeight="600.0" prefWidth="265.0" styleClass="side_anker_dashboard" stylesheets="@scratch.css">
                <children>
                   <Text fx:id="Institution" fill="WHITE" layoutX="11.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Khulna University of Engineering &amp; Technology" textAlignment="CENTER" wrappingWidth="237.35618591308588">
                      <font>

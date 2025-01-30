@@ -14,7 +14,7 @@ import java.sql.Statement;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader Loader=new FXMLLoader(getClass().getResource("Welcome_page.fxml"));
+        FXMLLoader Loader=new FXMLLoader(getClass().getResource("welcome_page.fxml"));
         stage.setScene(new Scene(Loader.load()));
         stage.setTitle("i connect");
         stage.setResizable(false);
